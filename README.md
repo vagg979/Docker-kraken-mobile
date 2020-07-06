@@ -6,7 +6,6 @@ _Los paquetes o características instaladas son:_
 - Ruby
 - Variables de entorno JAVA_HOME y ANDROID_HOME
 - Kraken-mobile
-- Sublime text 3
 
 ## Comenzando 🚀
 
