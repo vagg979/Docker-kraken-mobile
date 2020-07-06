@@ -49,7 +49,7 @@ adb connect host.docker.internal:5557**
 
 _ejecutar **adb devices** para verificar los dispositivos conectados_
 
-![ejecución adb devices](https://github.com/vagg979/Docker-kraken-mobile/blob/master/adb_devices.png)
+![ejecución adb devices](https://github.com/vagg979/Docker-kraken-mobile/blob/master/images/adb_devices.png)
  
  3. Ingresar a la carpeta root con el comando **cd root/** y ejecutar el comando **kraken-mobile setup** para configurar los dispositivos y las aplicaciones que se ejecutarán durante la prueba.
  
