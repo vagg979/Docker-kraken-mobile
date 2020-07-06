@@ -27,7 +27,6 @@ _En su **(host)**  debe tener instaladas:_
 _Debes tener la imagen docker, este proyecto y los prerequisitos en tu máquina, debes tener corriendo los siguientes elementos en tu máquina:_
 
 • Dispositivos android conectados o emulados.
-• Xming.
 
 ## Ejecutando las pruebas ⚙️
 
@@ -40,6 +39,8 @@ _Con este proyecto_
 --name (Nombre de nuestro contenedor una vez inicie)
 
 **docker run --privileged -it -p 5554:5554 -p 5555:5555 -p 5556:5556 -p 5557:5557 -p 5037:5037 -v ruta/carpeta/host:/home/root/ --name kraken kraken-mobile:1.04**
+
+Si tienes problemas con la versión de adb del contenedor con el de el host, debes remplazar la carpeta **platform_tools** en tu host por la contenida en **platform-tools_r29.0.5-windows.zip**
 
 2. Conectar los dispositivos al contenedor.
 _En mi caso los dispositivos están en los puertos 5554 y 5556, debo conectarlos a un puerto más arriba cada uno_:
