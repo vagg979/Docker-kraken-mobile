@@ -32,10 +32,15 @@ _Debes tener la imagen docker, este proyecto y los prerequisitos en tu máquina,
 _Con este proyecto_
 
 1. Iniciar la imagen docker, pasandole como parámetros:
+
 -it (Inicia el contenedor de forma interactiva).
+
 -p (Puertos que se quieren compartir entre el host y el contenedor para conexión de los dispositivos).
+
 -v (Carpeta a compartir enter el host y el contenedor docker en la ruta home/root/)
+
 --name (Nombre de nuestro contenedor una vez inicie)
+
 
 **docker run --privileged -it -p 5554:5554 -p 5555:5555 -p 5556:5556 -p 5557:5557 -p 5037:5037 -v ruta/carpeta/host:/home/root/ --name kraken kraken-mobile:1.04**
 
