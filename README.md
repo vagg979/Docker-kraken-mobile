@@ -19,6 +19,8 @@ _En su **(host)**  debe tener instaladas:_
 
 • Emuladores android y/o dispositivos físicos.
 
+• Configurar un proyecto kraken-mobile de acuerdo a la documentación oficial.**https://github.com/TheSoftwareDesignLab/KrakenMobile**
+
 
 
 ### Instalación 🔧
@@ -29,7 +31,7 @@ _Debes tener la imagen docker, este proyecto y los prerequisitos en tu máquina,
 
 ## Ejecutando las pruebas ⚙️
 
-_Con este proyecto_
+_Con un proyecto kraken-mobile previamente configurado_
 
 1. Iniciar la imagen docker, pasandole como parámetros:
 
@@ -37,12 +39,12 @@ _Con este proyecto_
 
 **-p** (Puertos que se quieren compartir entre el host y el contenedor para conexión de los dispositivos).
 
-**-v* (Carpeta a compartir enter el host y el contenedor docker en la ruta home/root/) 
+**-v* (Carpeta a compartir enter el host y el contenedor docker en la ruta /mnt/) 
 
 **--name** (Nombre de nuestro contenedor una vez inicie)
 
 
-**docker run --privileged -it -p 5554:5554 -p 5555:5555 -p 5556:5556 -p 5557:5557 -p 5037:5037 -v ruta/carpeta/host:/home/root/ --name kraken kraken-mobile:1.04**
+**docker run --privileged -it -p 5554:5554 -p 5555:5555 -p 5556:5556 -p 5557:5557 -p 5037:5037 -v ruta/carpeta/host:/mnt/ --name kraken kraken-mobile:1.04**
 
 Si tienes problemas con la versión de adb del contenedor con el de el host, debes remplazar la carpeta **platform_tools** en tu host por la contenida en **platform-tools_r29.0.5-windows.zip**
 
@@ -56,9 +58,9 @@ _ejecutar **adb devices** para verificar los dispositivos conectados_
 
 ![ejecución adb devices](https://github.com/vagg979/Docker-kraken-mobile/blob/master/images/adb_devices.png)
  
- 3. Ingresar a la carpeta root con el comando **cd root/** y ejecutar el comando **kraken-mobile setup** para configurar los dispositivos y las aplicaciones que se ejecutarán durante la prueba.
+ 3. Ingresar a la carpeta **mnt** con el comando **cd mnt/** y ejecutar el comando **kraken-mobile setup** para configurar los dispositivos y las aplicaciones que se ejecutarán durante la prueba.
  
- 4. Ejecutar el comando **kraken-mobile run xxxxxx.apk --configuration=kraken_mobile_settings.json --properties=kraken_properties.json**  para correr la prueba con las aplicaciones y procesos de este proyecto.
+ 4. Ejecutar el comando **kraken-mobile run xxxxxx.apk --configuration=kraken_mobile_settings.json --properties=kraken_properties.json**  para correr la prueba con las aplicaciones y procesos configurados.
  
 
 ### Resultados de las pruebas 🔩
